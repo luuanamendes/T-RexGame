@@ -9,6 +9,8 @@ var imgCacto1, imgCacto2, imgCacto3, imgCacto4, imgCacto5, imgCacto6;
 
 var gameOver, imgGameOver, btnReiniciar, imgBtnReiniciar;
 
+var somPular, somBateu;
+
 var cactos, nuvens;
 
 var p1, p2;
@@ -42,6 +44,9 @@ function preload(){
   
   imgGameOver = loadImage("gameOver.png");
   imgReiniciar = loadImage("reiniciar.png");
+  
+  somPular = loadSound("pular.mp3");
+  somBateu = loadSound("bateu.mp3");
 }
 
 function setup() {
@@ -111,6 +116,7 @@ function draw() {
     //se o ESPAÇO for pressionado o trex pula
     if(keyDown("space") && trex.y >= 320) {
       trex.velocityY = -12;
+      somPular.play();
     }
   
     //adiciona gravidade ao trex
@@ -134,7 +140,7 @@ function draw() {
     if(cactos.isTouching(trex)){
         //altera o estado do jogo
         estadoJogo = PARADO;
-        
+        somBateu.play();
         //muda a maior pontuação
         if(maiorPont < pontuacao){
           maiorPont = pontuacao;
