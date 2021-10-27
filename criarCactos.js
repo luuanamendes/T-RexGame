@@ -3,7 +3,7 @@ function criarCactos() {
     //se o resto da divisão do frameCount por 60 for 0, entao...
     if(frameCount % 60 === 0) {
       //cria a sprite cacto
-      var cacto = createSprite(width+20,height-95,10,30);
+      var cacto = createSprite(500,345,10,30);;
       cacto.velocityX = -5;
       
       //gera um numero aleatorio de 1 a 6 e atribui para alt
@@ -28,7 +28,7 @@ function criarCactos() {
       
             
       cacto.scale = 0.6;
-      cacto.lifetime = width/4;
+      cacto.lifetime = 125;
       
       //adicionar cada cacto ao grupo de cactos
       cactos.add(cacto);
