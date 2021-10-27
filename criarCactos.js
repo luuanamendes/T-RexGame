@@ -27,7 +27,7 @@ function criarCactos() {
       }
       
             
-      cacto.scale = 0.6;
+      cacto.scale = 0.5;
       cacto.lifetime = 125;
       
       //adicionar cada cacto ao grupo de cactos
