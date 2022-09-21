@@ -37,11 +37,8 @@ function playingGame() {
             maiorPont = pontuacao;
         }
 
-        if (vidas >= 1) {
-            text("Tente novamente! :)", 190, 200);
-        }
-        else {
-            gameOver.visible = true;
+        if (vidas <= 0) {
+             gameOver.visible = true;
         }
 
     }
